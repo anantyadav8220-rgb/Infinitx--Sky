@@ -1,0 +1,1523 @@
+/* =====================================
+INFINITIX SKY V3.2
+style.css
+HALF CODE
+SECTION 1 → SECTION 15
+===================================== */
+
+
+/* =====================================
+SECTION 1
+ROOT SYSTEM
+===================================== */
+
+:root {
+
+    --bg-main: #070b14;
+    --bg-card: #111827;
+    --bg-light: #1f2937;
+
+    --primary: #3b82f6;
+    --secondary: #8b5cf6;
+
+    --text-main: #ffffff;
+    --text-light: #cbd5e1;
+
+    --danger: #ef4444;
+    --success: #22c55e;
+
+    --radius: 18px;
+
+}
+
+
+/* =====================================
+SECTION 2
+GLOBAL BODY SYSTEM
+===================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    background: var(--bg-main);
+
+    color: var(--text-main);
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+
+    min-height: 100vh;
+
+}
+
+
+/* =====================================
+SECTION 3
+SCROLLBAR SYSTEM
+===================================== */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #111;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+}
+
+
+/* =====================================
+SECTION 4
+GLOBAL BUTTON SYSTEM
+===================================== */
+
+.mainButton {
+
+    padding: 14px 22px;
+
+    border: none;
+
+    border-radius: var(--radius);
+
+    background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.mainButton:hover {
+
+    transform: scale(1.05);
+
+    opacity: 0.9;
+
+}
+
+.secondaryButton {
+
+    padding: 12px 18px;
+
+    border-radius: var(--radius);
+
+    border: 1px solid #334155;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================
+SECTION 5
+INPUT SYSTEM
+===================================== */
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    border-radius: 14px;
+
+    border: 1px solid #334155;
+
+    background: #0f172a;
+
+    color: white;
+
+    outline: none;
+
+}
+
+
+/* =====================================
+SECTION 6
+LOADING SCREEN
+===================================== */
+
+.loadingScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #020617;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+}
+
+.loadingLogo {
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+.loadingBar {
+
+    width: 260px;
+
+    height: 12px;
+
+    background: #1e293b;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+.loadingProgress {
+
+    width: 60%;
+
+    height: 100%;
+
+    background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #8b5cf6);
+
+}
+
+
+/* =====================================
+SECTION 7
+TOP NAVBAR
+===================================== */
+
+.topNavbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    background: rgba(10,15,25,0.95);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    z-index: 500;
+
+}
+
+.logoArea {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+}
+
+.topStats {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+.topStat {
+
+    background: var(--bg-card);
+
+    padding: 10px 16px;
+
+    border-radius: 14px;
+
+}
+
+
+/* =====================================
+SECTION 8
+LEFT SIDEBAR
+===================================== */
+
+.leftSidebar {
+
+    position: fixed;
+
+    top: 80px;
+
+    left: 10px;
+
+    width: 230px;
+
+    background: rgba(15,23,42,0.9);
+
+    border-radius: 20px;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+.sidebarButton {
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+.sidebarButton.active {
+
+    background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+}
+
+
+/* =====================================
+SECTION 9
+HERO SECTION
+===================================== */
+
+.heroSection {
+
+    margin-top: 100px;
+
+    margin-left: 260px;
+
+    margin-right: 20px;
+
+    background: linear-gradient(
+    135deg,
+    #1e3a8a,
+    #312e81);
+
+    border-radius: 30px;
+
+    padding: 60px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.heroTitle {
+
+    font-size: 52px;
+
+    font-weight: bold;
+
+}
+
+.heroDescription {
+
+    margin-top: 15px;
+
+    color: var(--text-light);
+
+    font-size: 18px;
+
+}
+
+.heroButtons {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    gap: 14px;
+
+}
+
+
+/* =====================================
+SECTION 10
+LOGIN SYSTEM
+===================================== */
+
+.loginSection {
+
+    margin-left: 260px;
+
+    padding: 30px 20px;
+
+}
+
+.loginCard {
+
+    max-width: 450px;
+
+    background: var(--bg-card);
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    border: 1px solid #334155;
+
+}
+
+.loginHeader {
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =====================================
+SECTION 11
+PROFILE SYSTEM
+===================================== */
+
+.profileSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.profileCard {
+
+    background: var(--bg-card);
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+}
+
+.profileAvatar {
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #8b5cf6);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 48px;
+
+}
+
+.profileName {
+
+    margin-top: 20px;
+
+    font-size: 32px;
+
+}
+
+.profileStatsGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 14px;
+
+    margin-top: 20px;
+
+}
+
+.profileStat {
+
+    background: #1e293b;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+}
+
+
+/* =====================================
+SECTION 12
+SECTION TITLES
+===================================== */
+
+.sectionTitle {
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================
+SECTION 13
+EVENT SYSTEM
+===================================== */
+
+.eventsSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.eventGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 20px;
+
+}
+
+.eventCard {
+
+    background: var(--bg-card);
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+}
+
+.eventImage {
+
+    font-size: 60px;
+
+}
+
+.eventTimer {
+
+    margin-top: 12px;
+
+    color: #facc15;
+
+}
+
+
+/* =====================================
+SECTION 14
+MARKETPLACE SYSTEM
+===================================== */
+
+.marketplaceSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.marketplaceGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+    gap: 20px;
+
+}
+
+.marketItem {
+
+    background: var(--bg-card);
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+}
+
+.marketImage {
+
+    font-size: 54px;
+
+}
+
+.marketName {
+
+    margin-top: 14px;
+
+    font-size: 24px;
+
+}
+
+.marketPrice {
+
+    margin-top: 12px;
+
+    color: #facc15;
+
+}
+
+
+/* =====================================
+SECTION 15
+GAME SYSTEM
+===================================== */
+
+.gamesSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.gamesGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 20px;
+
+}
+
+.gameCard {
+
+    background: var(--bg-card);
+
+    border-radius: 24px;
+
+    padding: 20px;
+
+}
+
+.gameBanner {
+
+    height: 180px;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+    135deg,
+    #1e293b,
+    #0f172a);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 60px;
+
+}
+/* =====================================
+SECTION 16
+MULTIPLAYER SYSTEM
+===================================== */
+
+.multiplayerSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.multiplayerGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 20px;
+
+}
+
+.multiplayerCard {
+
+    background: var(--bg-card);
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+}
+
+
+/* =====================================
+SECTION 17
+CHAT SYSTEM
+===================================== */
+
+.chatSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.chatBox {
+
+    height: 300px;
+
+    overflow-y: auto;
+
+    background: #0f172a;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+}
+
+.message {
+
+    padding: 12px;
+
+    border-radius: 14px;
+
+    margin-bottom: 12px;
+
+}
+
+.message.system {
+
+    background: #1e293b;
+
+}
+
+.message.player {
+
+    background: linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+
+}
+
+.chatInputArea {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 14px;
+
+}
+
+
+/* =====================================
+SECTION 18
+FRIEND SYSTEM
+===================================== */
+
+.friendsSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.friendList {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+.friendCard {
+
+    background: var(--bg-card);
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.friendAvatar {
+
+    font-size: 34px;
+
+}
+
+
+/* =====================================
+SECTION 19
+AI MODEL SYSTEM
+===================================== */
+
+.aiSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.modelGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+
+    gap: 20px;
+
+}
+
+.modelCard {
+
+    background: var(--bg-card);
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+}
+
+
+/* =====================================
+SECTION 20
+INVENTORY SYSTEM
+===================================== */
+
+.inventorySection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.inventoryGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+
+    gap: 16px;
+
+}
+
+.inventoryItem {
+
+    aspect-ratio: 1/1;
+
+    background: #1e293b;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 40px;
+
+}
+
+
+/* =====================================
+SECTION 21
+SETTINGS SYSTEM
+===================================== */
+
+.settingsSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.settingsGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+
+    gap: 20px;
+
+}
+
+.settingsCard {
+
+    background: var(--bg-card);
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+}
+
+
+/* =====================================
+SECTION 22
+NOTIFICATION SYSTEM
+===================================== */
+
+.notificationSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.notificationGrid {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+.notificationCard {
+
+    background: #1e293b;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+}
+
+
+/* =====================================
+SECTION 23
+LCS SYSTEM
+===================================== */
+
+.lcsSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.lcsContainer {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+
+    gap: 18px;
+
+}
+
+.lcsCard {
+
+    background: linear-gradient(
+    135deg,
+    #1e293b,
+    #111827);
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+}
+
+
+/* =====================================
+SECTION 24
+ONLINE PLAYERS
+===================================== */
+
+.onlinePlayersSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.onlineGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+
+    gap: 18px;
+
+}
+
+.onlinePlayer {
+
+    background: #1e293b;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+}
+
+
+/* =====================================
+SECTION 25
+LEADERBOARD SYSTEM
+===================================== */
+
+.leaderboardSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.leaderboardCard {
+
+    background: var(--bg-card);
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+}
+
+.leaderboardRow {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #334155;
+
+}
+
+
+/* =====================================
+SECTION 26
+NEWS SYSTEM
+===================================== */
+
+.newsSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.newsGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 20px;
+
+}
+
+.newsCard {
+
+    background: var(--bg-card);
+
+    padding: 22px;
+
+    border-radius: 22px;
+
+}
+
+
+/* =====================================
+SECTION 27
+GAME MODES SYSTEM
+===================================== */
+
+.modesSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.modesGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+
+    gap: 20px;
+
+}
+
+.modeCard {
+
+    background: linear-gradient(
+    135deg,
+    #1e293b,
+    #0f172a);
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    font-size: 24px;
+
+}
+
+
+/* =====================================
+SECTION 28
+OFFERS SYSTEM
+===================================== */
+
+.offersSection {
+
+    margin-left: 260px;
+
+    padding: 20px;
+
+}
+
+.offersGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 20px;
+
+}
+
+.offerCard {
+
+    background: linear-gradient(
+    135deg,
+    #312e81,
+    #1e1b4b);
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+}
+
+
+/* =====================================
+SECTION 29
+BOTTOM NAVIGATION
+===================================== */
+
+.bottomNavigation {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 75px;
+
+    background: rgba(10,15,25,0.95);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    z-index: 999;
+
+}
+
+.bottomNavButton {
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+}
+
+.bottomNavButton.active {
+
+    color: #3b82f6;
+
+}
+
+
+/* =====================================
+SECTION 30
+SYSTEM OVERLAY
+===================================== */
+
+.systemOverlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.7);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 2000;
+
+}
+
+.overlayBox {
+
+    width: 90%;
+
+    max-width: 450px;
+
+    background: var(--bg-card);
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+}
+
+
+/* =====================================
+SECTION 31
+POPUP SYSTEM
+===================================== */
+
+.popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.75);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 2500;
+
+}
+
+.popupContent {
+
+    width: 90%;
+
+    max-width: 400px;
+
+    background: #111827;
+
+    padding: 28px;
+
+    border-radius: 22px;
+
+}
+
+
+/* =====================================
+SECTION 32
+BACKGROUND EFFECTS
+===================================== */
+
+.backgroundEffects {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    z-index: -1;
+
+}
+
+.glowOrb {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: 0.25;
+
+}
+
+.orb1 {
+
+    width: 300px;
+
+    height: 300px;
+
+    background: #3b82f6;
+
+    top: -100px;
+
+    left: -100px;
+
+}
+
+.orb2 {
+
+    width: 250px;
+
+    height: 250px;
+
+    background: #8b5cf6;
+
+    bottom: -80px;
+
+    right: -80px;
+
+}
+
+.orb3 {
+
+    width: 220px;
+
+    height: 220px;
+
+    background: #06b6d4;
+
+    top: 40%;
+
+    left: 60%;
+
+}
+
+
+/* =====================================
+SECTION 33
+FOOTER SYSTEM
+===================================== */
+
+.footer {
+
+    margin-left: 260px;
+
+    padding: 40px 20px 120px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+}
+
+.footerLinks {
+
+    margin-top: 14px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+.footerLinks a {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+/* =====================================
+SECTION 34
+UTILITY CLASSES
+===================================== */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+.flex {
+
+    display: flex;
+
+}
+
+.grid {
+
+    display: grid;
+
+}
+
+.center {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* =====================================
+SECTION 35
+RESPONSIVE SYSTEM
+===================================== */
+
+@media (max-width: 900px) {
+
+    .leftSidebar {
+
+        display: none;
+
+    }
+
+    .heroSection,
+    .loginSection,
+    .profileSection,
+    .eventsSection,
+    .marketplaceSection,
+    .gamesSection,
+    .multiplayerSection,
+    .chatSection,
+    .friendsSection,
+    .aiSection,
+    .inventorySection,
+    .settingsSection,
+    .notificationSection,
+    .lcsSection,
+    .onlinePlayersSection,
+    .leaderboardSection,
+    .newsSection,
+    .modesSection,
+    .offersSection,
+    .footer {
+
+        margin-left: 0;
+
+    }
+
+    .heroTitle {
+
+        font-size: 36px;
+
+    }
+
+    .topNavbar {
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 12px;
+
+        gap: 10px;
+
+    }
+
+  }
