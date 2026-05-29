@@ -1,1 +1,1051 @@
+/* =========================================
+INFINITIX SKY V3.2
+style.css
+REAL PLATFORM VERSION
+========================================= */
 
+
+/* =========================================
+SECTION 1
+ROOT VARIABLES
+========================================= */
+
+:root {
+
+    --bg-primary:
+    #0f172a;
+
+    --bg-secondary:
+    #111827;
+
+    --bg-card:
+    #1e293b;
+
+    --accent:
+    #3b82f6;
+
+    --text:
+    #f1f5f9;
+
+    --border:
+    #334155;
+
+    --success:
+    #22c55e;
+
+    --danger:
+    #ef4444;
+
+    --warning:
+    #f59e0b;
+
+}
+
+
+/* =========================================
+SECTION 2
+GLOBAL RESET
+========================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================
+SECTION 3
+BODY
+========================================= */
+
+body {
+
+    background:
+    var(--bg-primary);
+
+    color:
+    var(--text);
+
+    font-family:
+    Arial,
+    sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+SECTION 4
+LOADING SCREEN
+========================================= */
+
+#loadingScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    #000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+
+/* =========================================
+SECTION 5
+LOADING LOGO
+========================================= */
+
+.loadingLogo {
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================
+SECTION 6
+LOADING TEXT
+========================================= */
+
+.loadingText {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================
+SECTION 7
+LOADING BAR
+========================================= */
+
+.loadingBar {
+
+    width: 250px;
+
+    height: 10px;
+
+    background:
+    #222;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================
+SECTION 8
+LOADING FILL
+========================================= */
+
+.loadingFill {
+
+    width: 60%;
+
+    height: 100%;
+
+    background:
+    var(--accent);
+
+    border-radius: 30px;
+
+}
+
+
+/* =========================================
+SECTION 9
+TOP NAVBAR
+========================================= */
+
+.topNavbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    background:
+    var(--bg-secondary);
+
+    border-bottom:
+    1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    z-index: 100;
+
+}
+
+
+/* =========================================
+SECTION 10
+LOGO AREA
+========================================= */
+
+.logoArea {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+SECTION 11
+NAV BUTTONS
+========================================= */
+
+.navButton {
+
+    background:
+    transparent;
+
+    border: none;
+
+    color:
+    white;
+
+    font-size: 22px;
+
+    margin-left: 15px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+SECTION 12
+SIDEBAR
+========================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 70px;
+
+    left: 0;
+
+    width: 220px;
+
+    height: calc(100vh - 70px);
+
+    background:
+    var(--bg-secondary);
+
+    border-right:
+    1px solid var(--border);
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+/* =========================================
+SECTION 13
+SIDEBAR BUTTONS
+========================================= */
+
+.sidebar button {
+
+    background:
+    var(--bg-card);
+
+    border:
+    1px solid var(--border);
+
+    color:
+    white;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+}
+
+
+/* =========================================
+SECTION 14
+MAIN CONTENT
+========================================= */
+
+#mainContent {
+
+    margin-left: 220px;
+
+    padding-top: 90px;
+
+    padding-left: 20px;
+
+    padding-right: 20px;
+
+    padding-bottom: 100px;
+
+}
+
+
+/* =========================================
+SECTION 15
+PAGE SECTION
+========================================= */
+
+.pageSection {
+
+    display: block;
+
+}
+
+
+/* =========================================
+SECTION 16
+HIDDEN SYSTEM
+========================================= */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* =========================================
+SECTION 17
+HERO BANNER
+========================================= */
+
+.heroBanner {
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================================
+SECTION 18
+CARD GRID
+========================================= */
+
+.cardGrid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap: 20px;
+
+}
+
+
+/* =========================================
+SECTION 19
+CARD
+========================================= */
+
+.card {
+
+    background:
+    var(--bg-card);
+
+    border:
+    1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+}
+
+
+/* =========================================
+SECTION 20
+SECTION TITLE
+========================================= */
+
+.sectionTitle {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================
+SECTION 21
+GAME CARD
+========================================= */
+
+.gameCard {
+
+    background:
+    var(--bg-card);
+
+    border:
+    1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================
+SECTION 22
+GAME THUMBNAIL
+========================================= */
+
+.gameThumbnail {
+
+    width: 100%;
+
+    height: 180px;
+
+    background:
+    #222;
+
+    border-radius: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================================
+SECTION 23
+BUTTONS
+========================================= */
+
+button {
+
+    background:
+    var(--accent);
+
+    border: none;
+
+    color:
+    white;
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+SECTION 24
+CHAT BOX
+========================================= */
+
+#chatBox {
+
+    background:
+    var(--bg-card);
+
+    border:
+    1px solid var(--border);
+
+    border-radius: 18px;
+
+    height: 400px;
+
+    overflow-y: auto;
+
+    padding: 15px;
+
+}
+
+
+/* =========================================
+SECTION 25
+CHAT MESSAGE
+========================================= */
+
+.chatMessage {
+
+    background:
+    #0f172a;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================
+SECTION 26
+CHAT USER
+========================================= */
+
+.chatUser {
+
+    font-weight: bold;
+
+    color:
+    var(--accent);
+
+}
+
+
+/* =========================================
+SECTION 27
+CHAT INPUT AREA
+========================================= */
+
+.chatInputArea {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================================
+SECTION 28
+INPUTS
+========================================= */
+
+input {
+
+    width: 100%;
+
+    background:
+    #0f172a;
+
+    border:
+    1px solid var(--border);
+
+    color:
+    white;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+}
+
+
+/* =========================================
+SECTION 29
+PROFILE CARD
+========================================= */
+
+.profileCard {
+
+    background:
+    var(--bg-card);
+
+    border:
+    1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================
+SECTION 30
+PROFILE AVATAR
+========================================= */
+
+.profileAvatar {
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    background:
+    var(--accent);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 50px;
+
+    margin: auto;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================
+SECTION 31
+PROFILE STATS
+========================================= */
+
+.profileStats {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+}
+
+
+/* =========================================
+SECTION 32
+BOTTOM NAVIGATION
+========================================= */
+
+.bottomNav {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    background:
+    var(--bg-secondary);
+
+    border-top:
+    1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    z-index: 100;
+
+}
+
+
+/* =========================================
+SECTION 33
+BOTTOM NAV BUTTON
+========================================= */
+
+.bottomNavButton {
+
+    background:
+    transparent;
+
+    border: none;
+
+    color:
+    white;
+
+    font-size: 24px;
+
+}
+
+
+/* =========================================
+SECTION 34
+ACTIVE NAV
+========================================= */
+
+.bottomNavButton.active {
+
+    color:
+    var(--accent);
+
+}
+
+
+/* =========================================
+SECTION 35
+GAME SCREEN
+========================================= */
+
+#gameScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    black;
+
+    z-index: 500;
+
+}
+
+
+/* =========================================
+SECTION 36
+GAME IFRAME
+========================================= */
+
+#gameIframe {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+/* =========================================
+SECTION 37
+GAME HEADER
+========================================= */
+
+.gameHeader {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    right: 10px;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+
+/* =========================================
+SECTION 38
+MARKET GRID
+========================================= */
+
+.marketGrid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap: 20px;
+
+}
+
+
+/* =========================================
+SECTION 39
+MARKET CARD
+========================================= */
+
+.marketCard {
+
+    background:
+    var(--bg-card);
+
+    border:
+    1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+}
+
+
+/* =========================================
+SECTION 40
+COMING SOON CARD
+========================================= */
+
+.comingSoonCard {
+
+    background:
+    linear-gradient(
+        135deg,
+        #1e3a8a,
+        #312e81
+    );
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================
+SECTION 41
+FEATURE ITEMS
+========================================= */
+
+.featureItem {
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================
+SECTION 42
+POPUP WINDOW
+========================================= */
+
+.popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    rgba(0,0,0,0.7);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 999;
+
+}
+
+
+/* =========================================
+SECTION 43
+POPUP CONTENT
+========================================= */
+
+.popupContent {
+
+    background:
+    var(--bg-card);
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+}
+
+
+/* =========================================
+SECTION 44
+SYSTEM OVERLAY
+========================================= */
+
+#systemOverlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    rgba(0,0,0,0.8);
+
+    z-index: 9999;
+
+}
+
+
+/* =========================================
+SECTION 45
+OVERLAY BOX
+========================================= */
+
+.overlayBox {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    background:
+    var(--bg-card);
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+}
+
+
+/* =========================================
+SECTION 46
+LOGIN CARD
+========================================= */
+
+.loginCard {
+
+    width: 350px;
+
+    margin: auto;
+
+    background:
+    var(--bg-card);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+}
+
+
+/* =========================================
+SECTION 47
+SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background:
+    var(--accent);
+
+    border-radius: 20px;
+
+}
+
+
+/* =========================================
+SECTION 48
+RESPONSIVE MOBILE
+========================================= */
+
+@media(max-width:900px) {
+
+    .sidebar {
+
+        display: none;
+
+    }
+
+    #mainContent {
+
+        margin-left: 0;
+
+    }
+
+}
+
+
+/* =========================================
+SECTION 49
+RESPONSIVE SMALL
+========================================= */
+
+@media(max-width:600px) {
+
+    .heroBanner {
+
+        padding: 20px;
+
+    }
+
+}
+
+
+/* =========================================
+SECTION 50
+FINAL SYSTEM READY
+========================================= */
+
+.systemReady {
+
+    opacity: 1;
+
+  }
