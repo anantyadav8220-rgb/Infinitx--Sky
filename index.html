@@ -1,713 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INFINITIX SKY V4</title>
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
+<style>
 
-<title>
-INFINITIX SKY V3.2
-</title>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-<link
-rel="stylesheet"
-href="style.css">
+body{
 
-<link
-rel="stylesheet"
-href="mobile.css">
+background:
+linear-gradient(
+135deg,
+#050816,
+#0f172a,
+#020617
+);
 
+color:white;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+text-align:center;
+
+}
+
+.container{
+
+max-width:900px;
+
+padding:40px;
+
+}
+
+.logo{
+
+font-size:70px;
+
+margin-bottom:20px;
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+h1{
+
+font-size:55px;
+
+margin-bottom:15px;
+
+background:
+linear-gradient(
+90deg,
+#60a5fa,
+#38bdf8,
+#22d3ee
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.subtitle{
+
+font-size:22px;
+
+opacity:0.9;
+
+margin-bottom:30px;
+
+}
+
+.message{
+
+background:
+rgba(255,255,255,0.05);
+
+border:1px solid
+rgba(255,255,255,0.15);
+
+padding:25px;
+
+border-radius:20px;
+
+line-height:1.8;
+
+font-size:18px;
+
+backdrop-filter:blur(10px);
+
+}
+
+.features{
+
+margin-top:25px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:15px;
+
+}
+
+.feature{
+
+background:
+rgba(255,255,255,0.05);
+
+padding:15px;
+
+border-radius:15px;
+
+border:1px solid
+rgba(255,255,255,0.08);
+
+}
+
+.countdown{
+
+margin-top:30px;
+
+font-size:20px;
+
+color:#38bdf8;
+
+font-weight:bold;
+
+}
+
+.glow{
+
+position:absolute;
+
+width:400px;
+
+height:400px;
+
+background:#2563eb;
+
+filter:blur(150px);
+
+opacity:0.25;
+
+border-radius:50%;
+
+z-index:-1;
+
+}
+
+.glow1{
+
+top:-150px;
+
+left:-150px;
+
+}
+
+.glow2{
+
+bottom:-150px;
+
+right:-150px;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+@media(max-width:700px){
+
+h1{
+font-size:38px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+.message{
+font-size:16px;
+}
+
+}
+
+</style>
 </head>
-
 <body>
 
-<!-- =========================
-LOADING SCREEN
-========================= -->
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
 
-<div id="loadingScreen">
+<div class="container">
 
-<div class="loadingLogo">
-🌌
-</div>
+<div class="logo">🌌</div>
 
-<h1 class="loadingTitle">
-INFINITIX SKY
-</h1>
+<h1>INFINITIX SKY</h1>
 
-<p class="loadingText">
-Loading...
-</p>
+<p class="subtitle">
 
-</div>
-
-
-<!-- =========================
-NOTIFICATIONS
-========================= -->
-
-<div
-id="notificationContainer">
-</div>
-
-
-<!-- =========================
-HEADER
-========================= -->
-
-<header class="topNavbar">
-
-<div class="logoArea">
-
-🌌 INFINITIX SKY
-
-</div>
-
-<div class="navButtons">
-
-<button
-onclick="showPage('homePage')">
-
-🏠 Home
-
-</button>
-
-<button
-onclick="showPage('gamesPage')">
-
-🎮 Games
-
-</button>
-
-<button
-onclick="showPage('profilePage')">
-
-👤 Profile
-
-</button>
-
-<button
-onclick="showPage('settingsPage')">
-
-⚙ Settings
-
-</button>
-
-<button
-onclick="showPage('aboutPage')">
-
-ℹ About
-
-</button>
-
-</div>
-
-</header>
-
-
-<!-- =========================
-MAIN CONTENT
-========================= -->
-
-<main id="mainContent">
-
-
-<!-- =========================
-HOME PAGE
-========================= -->
-
-<section
-id="homePage"
-class="pageSection">
-
-<div class="heroSection">
-
-<h1>
-
-Welcome To
-INFINITIX SKY
-
-</h1>
-
-<p>
-
-A gaming platform
-powered by creativity,
-community and future
-technology.
+Version 3 has been temporarily closed
 
 </p>
 
-<button
-class="primaryButton"
-onclick="showPage('gamesPage')">
+<div class="message">
 
-Play Games
-
-</button>
-
-</div>
-
-
-<div class="cardsGrid">
-
-<div class="card">
-
-<h2>
-🎮 Games
-</h2>
-
-<p>
-
-Play official and
-embedded games.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>
-👤 Profile
-</h2>
-
-<p>
-
-Track your level,
-coins and progress.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>
-⚙ Settings
-</h2>
-
-<p>
-
-Customize your
-experience.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-<!-- =========================
-GAMES PAGE
-========================= -->
-
-<section
-id="gamesPage"
-class="pageSection hidden">
-
-<h1 class="sectionTitle">
-
-🎮 Games Center
-
-</h1>
-
-<p class="sectionDescription">
-
-Choose a game and start playing.
-
-</p>
-
-
-<!-- OFFICIAL GAMES -->
-
-<div class="card">
-
-<h2>
-
-⭐ Official Games
-
-</h2>
-
-<div class="gamesGrid">
-
-<div
-class="gameCard"
-onclick="launchGame('tictactoe')">
-
-<div class="gameThumb">
-
-⭕❌
-
-</div>
-
-<h3>
-
-Tic Tac Toe
-
-</h3>
-
-<p>
-
-Classic strategy game.
-
-</p>
-
-</div>
-
-<div
-class="gameCard"
-onclick="launchGame('haunted')">
-
-<div class="gameThumb">
-
-🧟
-
-</div>
-
-<h3>
-
-Haunted Survival
-
-</h3>
-
-<p>
-
-Coming Soon
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- EMBEDDED GAMES -->
-
-<div class="card">
-
-<h2>
-
-🌍 Embedded Games
-
-</h2>
-
-<div class="gamesGrid">
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://www.onlinegames.io/games/2024/unity/drift-king/index.html')">
-
-<div class="gameThumb">🚗</div>
-
-<h3>Drift King</h3>
-
-</div>
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://www.onlinegames.io/games/2022/unity/highway-traffic/index.html')">
-
-<div class="gameThumb">🚦</div>
-
-<h3>Highway Traffic</h3>
-
-</div>
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://cloud.onlinegames.io/games/2024/unity3/stickman-gta-city/index-og.html')">
-
-<div class="gameThumb">🏙</div>
-
-<h3>Stickman GTA City</h3>
-
-</div>
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://cloud.onlinegames.io/games/2023/unity2/real-flight-simulator/index.html')">
-
-<div class="gameThumb">✈</div>
-
-<h3>Real Flight Simulator</h3>
-
-</div>
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://cloud.onlinegames.io/games/2026/more/snaker-io/game.html')">
-
-<div class="gameThumb">🐍</div>
-
-<h3>Snaker.io</h3>
-
-</div>
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://cloud.onlinegames.io/games/2025/html/cube-worlds/index-og.html')">
-
-<div class="gameThumb">🧊</div>
-
-<h3>Cube Worlds</h3>
-
-</div>
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://www.onlinegames.io/games/2021/unity3/stickman-destruction/index.html')">
-
-<div class="gameThumb">💥</div>
-
-<h3>Stickman Destruction</h3>
-
-</div>
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://cloud.onlinegames.io/games/2025/html/pixelmon-town/game.html')">
-
-<div class="gameThumb">🟨</div>
-
-<h3>Pixelmon Town</h3>
-
-</div>
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://cloud.onlinegames.io/games/2025/unity2/five-nights-at-poppy/index-og.html')">
-
-<div class="gameThumb">😱</div>
-
-<h3>Five Nights At Poppy</h3>
-
-</div>
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://cloud.onlinegames.io/games/2021/2/monster-truck-mountain-climb/index-og.html')">
-
-<div class="gameThumb">🚚</div>
-
-<h3>Monster Truck Mountain Climb</h3>
-
-</div>
-
-<div
-class="gameCard"
-onclick="openEmbedGame('https://www.onlinegames.io/games/2021/unity/army-combat/index.html')">
-
-<div class="gameThumb">🔫</div>
-
-<h3>Army Combat</h3>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-GAME VIEWER PAGE
-========================= -->
-
-<section
-id="gameViewerPage"
-class="pageSection hidden">
-
-<button
-class="backButton"
-onclick="showPage('gamesPage')">
-
-⬅ Back To Games
-
-</button>
-
-<div class="gameViewerContainer">
-
-<iframe
-
-id="gameFrame"
-
-src=""
-
-allowfullscreen
-
-loading="lazy">
-
-</iframe>
-
-</div>
-
-</section>
-<!-- =========================
-PROFILE PAGE
-========================= -->
-
-<section
-id="profilePage"
-class="pageSection hidden">
-
-<h1>
-
-👤 Profile
-
-</h1>
-
-<div class="card">
-
-<h2 id="profileName">
-
-Guest User
-
-</h2>
-
-<p>
-
-🏅 Title:
-<span id="profileTitle">
-
-Beginner
-
-</span>
-
-</p>
-
-<p>
-
-⭐ Level:
-<span id="profileLevel">
-
-1
-
-</span>
-
-</p>
-
-<p>
-
-⚡ XP:
-<span id="profileXP">
-
-0
-
-</span>
-
-</p>
-
-<p>
-
-🪙 Coins:
-<span id="profileCoins">
-
-500
-
-</span>
-
-</p>
-
-<p>
-
-👥 Followers:
-<span id="profileFollowers">
-
-12
-
-</span>
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>
-
-🏆 Achievements
-
-</h2>
-
-<div id="achievementList">
-
-No achievements yet.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-SETTINGS PAGE
-========================= -->
-
-<section
-id="settingsPage"
-class="pageSection hidden">
-
-<h1>
-
-⚙ Settings
-
-</h1>
-
-<div class="card">
-
-<label>
-
-🌙 Dark Mode
-
-</label>
+We discovered several bugs, errors and system limitations
+in the current platform.
 
 <br><br>
 
-<button
-onclick="toggleTheme()">
-
-Toggle Theme
-
-</button>
-
-</div>
-
-<div class="card">
-
-<label>
-
-🔊 Sound
-
-</label>
+Our team is rebuilding the entire experience from the ground up.
 
 <br><br>
 
-<button
-onclick="toggleSound()">
-
-Toggle Sound
-
-</button>
+🚀 <b>INFINITIX SKY V4</b> is now under development.
 
 </div>
 
-<div class="card">
+<div class="features">
 
-<label>
+<div class="feature">
+⚡ LCS Engine
+</div>
 
-🧹 Clear Saved Data
+<div class="feature">
+🎮 Multiplayer Games
+</div>
 
-</label>
+<div class="feature">
+🌍 Advanced Gaming Platform
+</div>
 
-<br><br>
+<div class="feature">
+🤖 Improved AI Systems
+</div>
 
-<button
-onclick="resetData()">
+<div class="feature">
+🏆 Better Performance
+</div>
 
-Reset
-
-</button>
+<div class="feature">
+🔥 Future Technologies
+</div>
 
 </div>
 
-</section>
+<div class="countdown">
 
-
-<!-- =========================
-ABOUT PAGE
-========================= -->
-
-<section
-id="aboutPage"
-class="pageSection hidden">
-
-<h1>
-
-ℹ About
-
-</h1>
-
-<div class="card">
-
-<h2>
-
-🌌 INFINITIX SKY V3.2
-
-</h2>
-
-<p>
-
-A gaming platform built
-for games, creativity and
-future technology.
-
-</p>
+See you in Version 4...
 
 </div>
 
-<div class="card">
-
-<h2>
-
-🚀 Future Updates
-
-</h2>
-
-<ul>
-
-<li>Chat System</li>
-
-<li>Friends System</li>
-
-<li>Marketplace</li>
-
-<li>AI Studio</li>
-
-<li>Multiplayer</li>
-
-<li>LCS Engine</li>
-
-</ul>
-
 </div>
-
-</section>
-
-
-</main>
-
-
-<!-- =========================
-FOOTER
-========================= -->
-
-<footer class="footer">
-
-<p>
-
-© 2026
-INFINITIX SKY
-
-</p>
-
-</footer>
-
-
-<!-- =========================
-SCRIPT
-========================= -->
-
-<script src="script.js"></script>
 
 </body>
 </html>
